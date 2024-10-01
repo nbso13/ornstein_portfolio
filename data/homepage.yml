@@ -1,0 +1,246 @@
+# showcase
+showcase:
+  enable: true
+  title: "Hey, I'm Nick."
+  # subtitle: ""
+  description: >
+   I'm a civic technologist and with a background in analytics and neuroscience, 
+   looking for analyst jobs at non-profits and progressive political organizations. 
+   I just finished a job at Amazon Ads, before which I worked as a Fulbright Scholar in 
+   Dr. Albrecht Schmidt's  <a target='lab' href='https://www.um.informatik.uni-muenchen.de/index.html'>lab</a> 
+   at the LMU Munich under Dr. Lewis Chuang. I'm also an indie rock singer-songwriter trained on jazz keys.
+   
+  image:
+    x: "images/showcase/showcase.png"
+    _2x: "images/showcase/showcase@2x.png"
+  imageMobile:
+    x: "images/showcase/showcase-mobile.jpg"
+
+  button:
+    icon: "icon-mail-fill"
+    btnText: "Contact"
+    URL: "mailto:nickornstein4@gmail.com"
+
+  socialLinks:
+    - icon: "linkedin"
+      URL: "https://www.linkedin.com/in/nicholas-benjamin-ornstein"
+
+    - icon: "github"
+      URL: "https://github.com/nbso13"
+
+    - icon: "twitter"
+      URL: "https://x.com/ornsteinnick"
+
+    - icon: "instagram"
+      URL: "https://www.instagram.com/nickornstein"
+
+# about
+about:
+  enable: true
+  title: "Bio"
+  content: >
+    <p class="lead">
+      I was born and grew up outside Boston, MA, and completed my BSc. in Neuroscience at the University of Chicago in 2021.
+      </p>
+      <p class="lead">
+      After school, hoping to continue to build my research chops and learn more 
+      about my family's life in Europe post-war as survivors, I earned a Fulbright 
+      and moved to Munich Germany. On the research side, I worked in Professor Albrecht Schmidt's 
+      lab under Professor Lewis Chuang. I learned how to write clean research code,
+      build and test an HCI artifact (EMS system for rhythm learning), and fit into an interdisciplinary research group.
+      On the cultural side, I learned some basic German and joined a 
+      <a href="https://www.instagram.com/yudid_official/">funk and soul band</a> as a keyboardist and vocalist,
+      and started to play gigs around the city--highlights included Bahnwärter Thiel, 
+      the Lost Weekend, Killian's, Kennedy's, and Minna Thiel. 
+      </p>
+     <p class="lead">
+      In the mean time, my Fulbright year ended and it was time
+      to think about my expiring visa and my next role. Deciding to commit to more time in Europe, I accepted an offer at Amazon Ads
+      as a Data Analyst at Amazon Ads. Unfortunately, I was hit with months of visa processing delay.
+      I took the time to participate in the 2022 election, working remotely on Coach Cam Campbell's campaign
+      for Texas House district 132, using <a href="https://github.com/nbso13/texas_hd132_district_report">voter data I analyzed in GeoPandas to provide recommendations</a> voter data I analyzed in GeoPandas to provide recommendations
+      on which census tracts were most important for turning out key voters in the election.
+      Finally, I began my time at Amazon back in Munich. In my time as a data analyst, I 
+      honed my craft in SQL, Python, and AWS technologies. I learned a ton--how to build a clean slide deck,
+      how to present to C-suite execs, how to ask for help from the experts in my org, how to automate complicated tasks,
+      how to work on a remote and international team, how to prioritze tasks and say no to spillover requests.
+      At about a year and a half into the job, I accepted that while every other part of work was ideal (colleagues,
+      challenge, learning, comp, location, chance for promotion, life balance, etc.) I was hung up on the final output
+      of my work - that I was helping to optimize advertisements for maximum effect (return for advertisers). There
+      are more detrimental lines of work for sure, but I felt the net impact of what I was doing was none, or perhaps,
+      slightly negative (Joe Schmo buys what he otherwise would not have). I learned a healthy respect for the power
+      of advertising at scale. Subtle exposure can indeed change behavior. Groups of humans, if not predictable, become more 
+      predictable than individuals, to the point where you can know them and even shift decision outcomes. This line
+      of behavior economics thinking is nothing new if you're familiar with Thaler, Sunstein, and the late 'n great 
+      Kahneman and Tversky. But watching it play out in real time, and having a hand in it (however small), gave me
+      more of a Zuboff, surveillance capitalism feeling.
+    </p>
+     <p class="lead">
+      So my next career move, whatever it will be, will have to have some net positive downstream impact. That could be
+      fixing problems in the health care industry, modeling energy markets to suggest more efficient and equitable policies,
+      helping to elect progressives, or working as an analyst in the office of an attorney general. We'll see what works out.
+      Wherever I do end up, I will certainly bring with me a deeper understanding of and curiousity for the power held by these
+      large corporations that monetize the data of their millions (billions) of users. As LLMs give good text generation capability
+      to the internet Everyman, and companies craft increasingly capable automated agents, there will no doubt be changes
+      to human behavior on the internet, with impacts across the board (e-commerce, government, journalism, influence campaigns, etc).
+      In the longer arc of my career, I want to continue to study these phenomena with a mind toward the role of the government
+      in regulating behavior modification at scale.
+    </p>
+  button:
+    icon: "icon-smile-fill"
+    btnText: "About Me"
+    URL: "https://www.linkedin.com/in/nicholas-benjamin-ornstein"
+  image:
+    x: "images/who-am-i/user-picture.png"
+    _2x: "images/who-am-i/user-picture@2x.png"
+
+# education
+education:
+  enable: true
+  title: "Education"
+  items:
+    - university: "The University of Chicago"
+      year: "2017-2021"
+      degree: "Bachelor of Science (BSc), Neuroscience"
+
+    - university: "Concord Academy"
+      year: "2013-2017"
+      degree: "High School Diploma"
+
+# experience
+experience:
+  enable: true
+  title: "Experience"
+  description: >
+   This is where you can highlight a bit over your experience. Years of total experience, specialization, etc.
+  button:
+    icon: "icon-linkedin-fill"
+    btnText: "Linkedin"
+    URL: "https://www.linkedin.com/nicholas-benjamin-ornstein/"
+  button2:
+    icon: "icon-profile-fill"
+    btnText: "Download My Resume"
+    URL: "#"
+
+# Client & Work
+client_and_work:
+  title: "Clients & Works"
+  enable: true
+
+  clients:
+    - logo:
+        x: "images/clients/asgardia.png"
+        _2x: "images/clients/asgardia@2x.png"
+      alt: "Asgardia"
+
+    - logo:
+        x: "images/clients/earth-2.png"
+        _2x: "images/clients/earth-2@2x.png"
+      alt: "Earth 2.0"
+
+    - logo:
+        x: "images/clients/goldline.png"
+        _2x: "images/clients/goldline@2x.png"
+      alt: "Goldline"
+
+    - logo:
+        x: "images/clients/kanba.png"
+        _2x: "images/clients/kanba@2x.png"
+      alt: "Kanba"
+
+    - logo:
+        x: "images/clients/zoo-tv.png"
+        _2x: "images/clients/zoo-tv@2x.png"
+      alt: "Zoo"
+
+    - logo:
+        x: "images/clients/ztos.png"
+        _2x: "images/clients/ztos@2x.png"
+      alt: "Ztos"
+
+  works:
+    - title: "Radity Finance - UI Kit"
+      description: "We have been receiving a lot of requests for a Finance Kit recently due to the popularity of Fintech."
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study"
+        URL: "#"
+      image:
+        x: "images/works/radity-finance.jpg"
+        _2x: "images/works/radity-finance@2x.jpg"
+      is_even: true
+
+    - title: "Swiss Fintech Website"
+      description: "The Swiss Finance + Technology Association is the leading FinTech hub in Switzerland."
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study"
+        URL: "#"
+      image:
+        x: "images/works/swissfintech.jpg"
+        _2x: "images/works/swissfintech@2x.jpg"
+      is_even: false
+
+    - title: "Robo Advisor"
+      description: "Robo Advisor is a Swiss Wealth Manager and wants to create the best digital experience for its UNHW clients across the world. We started with a whiteboard."
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study"
+        URL: "#"
+      image:
+        x: "images/works/robo-advisor.jpg"
+        _2x: "images/works/robo-advisor@2x.jpg"
+      is_even: true
+
+# testimonial
+testimonial:
+  enable: true
+  title: "Testimonials"
+  items:
+    - name: "Daniel Jordan"
+      position: "Phonet, CEO"
+      content: "Cold calling can be a great way to generate quality leads. You get to speak to the gatekeepers and stakeholders, and you get a great insight into their requirements and influences. But cold calling is an art-form. It can be daunting, it’s always a lot of work, and you always need to make a good impression."
+      image:
+        x: "images/testimonials/daniel-jordan.jpg"
+        _2x: "images/testimonials/daniel-jordan@2x.jpg"
+
+    - name: "Jonathan Peters"
+      position: "Textic, CEO"
+      content: "Whether you or your loved one is encountering the natural decrease in mobility that occurs with the passing of time, or deals with an illness-related lack of physical agility, a stair lift can be the ideal way to put you in charge of your home again. Regardless of the shape or make of your living accommodation."
+      image:
+        x: "images/testimonials/jonathan-peters.jpg"
+        _2x: "images/testimonials/jonathan-peters@2x.jpg"
+
+    - name: "Antonio Willis"
+      position: "Cyberse, CEO"
+      content: "In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance in the achievement of increased business exposure and business sales. If your business already has a bunch of printed cards distributed to a number of potential customers and yet."
+      image:
+        x: "images/testimonials/antonio-willis.jpg"
+        _2x: "images/testimonials/antonio-willis@2x.jpg"
+
+# contact
+contact:
+  enable: true
+  title: "Contact"
+  form:
+    action: "#"
+    full_name: "Full Name"
+    email: "Email Address"
+    message: "Type Your Message Here"
+  # phone:
+  #   title: "Phone Number"
+  #   number: "+555 (11) 123 44 55"
+  email:
+    title: "Email"
+    email: '<a href="mailto:nickornstein4@gmail.com">nickornstein4@gmail.com</a>'
+  button:
+    icon: "icon-mail-fill"
+    btnText: "Send Message"
+
+# newsletter
+newsletter:
+  enable: true
+  title: "Newsletter subscription"
+  success_message: "Successfully subscribed"
+  error_message: "Error while subscribing."
+  note: "We'll never share your email with anyone else."
