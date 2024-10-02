@@ -10,9 +10,13 @@
 
 </head>
 
+
 <body class="{{ if .IsHome }}home{{ end }}">
 
 	{{ partial "header.html" . }}
+
+	<div id="sketch-container"></div>
+	<script src="/js/sketch.js"></script>
 
 	{{ range .Site.Params.sections }}
 	{{ partial . $ }}

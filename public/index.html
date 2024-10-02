@@ -75,6 +75,9 @@
 
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
 <script src='http://localhost:1313/js/library/lozad.min.js'></script>
 
 
@@ -82,6 +85,7 @@
 
 
 </head>
+
 
 <body class="home">
 
@@ -144,6 +148,9 @@
 </header>
 
 
+
+	<div id="sketch-container"></div>
+	<script src="/js/sketch.js"></script>
 
 	
 	
@@ -255,46 +262,12 @@
   After school, hoping to continue to build my research chops and learn more 
   about my family's life in Europe post-war as survivors, I earned a Fulbright 
   and moved to Munich Germany. On the research side, I worked in Professor Albrecht Schmidt's 
-  lab under Professor Lewis Chuang. I learned how to write clean research code,
-  build and test an HCI artifact (EMS system for rhythm learning), and fit into an interdisciplinary research group.
-  On the cultural side, I learned some basic German and joined a 
-  <a href="https://www.instagram.com/yudid_official/">funk and soul band</a> as a keyboardist and vocalist,
-  and started to play gigs around the city--highlights included Bahnwärter Thiel, 
-  the Lost Weekend, Killian's, Kennedy's, and Minna Thiel. 
+  lab under Professor Lewis Chuang. I then did some data work on a Texas House campaign via 
+  Bluebonnet Data back stateside, before starting a Data Analyst role at Amazon Germany in December 2022.
+  In July 2024, I decided I was ready to explore new opportunities and prepare to apply to graduate programs,
+  and moved back to the Boston area.
   </p>
- <p class="lead">
-  In the mean time, my Fulbright year ended and it was time
-  to think about my expiring visa and my next role. Deciding to commit to more time in Europe, I accepted an offer at Amazon Ads
-  as a Data Analyst at Amazon Ads. Unfortunately, I was hit with months of visa processing delay.
-  I took the time to participate in the 2022 election, working remotely on Coach Cam Campbell's campaign
-  for Texas House district 132, using <a href="https://github.com/nbso13/texas_hd132_district_report">voter data I analyzed in GeoPandas to provide recommendations</a> voter data I analyzed in GeoPandas to provide recommendations
-  on which census tracts were most important for turning out key voters in the election.
-  Finally, I began my time at Amazon back in Munich. In my time as a data analyst, I 
-  honed my craft in SQL, Python, and AWS technologies. I learned a ton--how to build a clean slide deck,
-  how to present to C-suite execs, how to ask for help from the experts in my org, how to automate complicated tasks,
-  how to work on a remote and international team, how to prioritze tasks and say no to spillover requests.
-  At about a year and a half into the job, I accepted that while every other part of work was ideal (colleagues,
-  challenge, learning, comp, location, chance for promotion, life balance, etc.) I was hung up on the final output
-  of my work - that I was helping to optimize advertisements for maximum effect (return for advertisers). There
-  are more detrimental lines of work for sure, but I felt the net impact of what I was doing was none, or perhaps,
-  slightly negative (Joe Schmo buys what he otherwise would not have). I learned a healthy respect for the power
-  of advertising at scale. Subtle exposure can indeed change behavior. Groups of humans, if not predictable, become more 
-  predictable than individuals, to the point where you can know them and even shift decision outcomes. This line
-  of behavior economics thinking is nothing new if you're familiar with Thaler, Sunstein, and the late 'n great 
-  Kahneman and Tversky. But watching it play out in real time, and having a hand in it (however small), gave me
-  more of a Zuboff, surveillance capitalism feeling.
-</p>
- <p class="lead">
-  So my next career move, whatever it will be, will have to have some net positive downstream impact. That could be
-  fixing problems in the health care industry, modeling energy markets to suggest more efficient and equitable policies,
-  helping to elect progressives, or working as an analyst in the office of an attorney general. We'll see what works out.
-  Wherever I do end up, I will certainly bring with me a deeper understanding of and curiousity for the power held by these
-  large corporations that monetize the data of their millions (billions) of users. As LLMs give good text generation capability
-  to the internet Everyman, and companies craft increasingly capable automated agents, there will no doubt be changes
-  to human behavior on the internet, with impacts across the board (e-commerce, government, journalism, influence campaigns, etc).
-  In the longer arc of my career, I want to continue to study these phenomena with a mind toward the role of the government
-  in regulating behavior modification at scale.
-</p>
+ 
 
         <a
           href="https://www.linkedin.com/in/nicholas-benjamin-ornstein"
@@ -365,13 +338,12 @@
                 <div class="container-experience">
   <div class="row">
     <h2>Experience</h2>
-    <p class="lead">This is where you can highlight a bit over your experience. Years of total experience, specialization, etc.
-</p>
+    <p class="lead">Years of post-grad experience as a researcher and data analyst.</p>
   </div>
   <div class="row">
     <div class="col-12 col-lg-4">
       <a
-        href="https://www.linkedin.com/nicholas-benjamin-ornstein/"
+        href="https://www.linkedin.com/in/nicholas-benjamin-ornstein/"
         class="btn btn-primary btn-block"
         target="_blank"
         rel="noopener noreferrer"
@@ -383,7 +355,7 @@
     </div>
     <div class="col-12 col-lg-4">
       <a
-        href="http://localhost:1313/"
+        href="http://localhost:1313/ornstein_resume_2024.pdf"
         class="btn btn-frameless btn-block"
         target="_blank"
         rel="noopener noreferrer"
@@ -406,155 +378,11 @@
 <section id="portfolio" class="section section--border-bottom">
   <div class="container">
     <h2 class=" rad-animation-group rad-fade-down">
-      Clients &amp; Works
+      Projects
     </h2>
     <div class="row row--padded rad-animation-group rad-fade-down">
       <div class="col-12">
         <div class="clients">
-          
-          <div class="clients__item">
-            <a href="https://radity.com">
-              
-              
-              
-              
-              
-            
-              <picture class="picture clients">
-                <source srcset="/images/clients/asgardia_hu2437164029900032977.webp 1x, /images/clients/asgardia@2x_hu5183741673419483328.webp 2x" type="image/webp" />
-                <source srcset="/images/clients/asgardia.png 1x, /images/clients/asgardia@2x.png 2x" type="image/webp">
-                <img
-                  class="portfolio-project img-responsive"
-                  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                  srcset="/images/clients/asgardia.png 1x, /images/clients/asgardia@2x.png 2x"
-                  data-src="/images/clients/asgardia.png"
-                  data-srcset="/images/clients/asgardia.png 1x, /images/clients/asgardia@2x.png 2x"
-                  alt="Asgardia"
-                />
-              </picture>
-
-            </a>
-          </div>
-          
-          <div class="clients__item">
-            <a href="https://radity.com">
-              
-              
-              
-              
-              
-            
-              <picture class="picture clients">
-                <source srcset="/images/clients/earth-2_hu4149280188196097979.webp 1x, /images/clients/earth-2@2x_hu2427104620812317846.webp 2x" type="image/webp" />
-                <source srcset="/images/clients/earth-2.png 1x, /images/clients/earth-2@2x.png 2x" type="image/webp">
-                <img
-                  class="portfolio-project img-responsive"
-                  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                  srcset="/images/clients/earth-2.png 1x, /images/clients/earth-2@2x.png 2x"
-                  data-src="/images/clients/earth-2.png"
-                  data-srcset="/images/clients/earth-2.png 1x, /images/clients/earth-2@2x.png 2x"
-                  alt="Earth 2.0"
-                />
-              </picture>
-
-            </a>
-          </div>
-          
-          <div class="clients__item">
-            <a href="https://radity.com">
-              
-              
-              
-              
-              
-            
-              <picture class="picture clients">
-                <source srcset="/images/clients/goldline_hu17071483396115881097.webp 1x, /images/clients/goldline@2x_hu13843709239745175776.webp 2x" type="image/webp" />
-                <source srcset="/images/clients/goldline.png 1x, /images/clients/goldline@2x.png 2x" type="image/webp">
-                <img
-                  class="portfolio-project img-responsive"
-                  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                  srcset="/images/clients/goldline.png 1x, /images/clients/goldline@2x.png 2x"
-                  data-src="/images/clients/goldline.png"
-                  data-srcset="/images/clients/goldline.png 1x, /images/clients/goldline@2x.png 2x"
-                  alt="Goldline"
-                />
-              </picture>
-
-            </a>
-          </div>
-          
-          <div class="clients__item">
-            <a href="https://radity.com">
-              
-              
-              
-              
-              
-            
-              <picture class="picture clients">
-                <source srcset="/images/clients/kanba_hu11962818607416477482.webp 1x, /images/clients/kanba@2x_hu4530735014218789905.webp 2x" type="image/webp" />
-                <source srcset="/images/clients/kanba.png 1x, /images/clients/kanba@2x.png 2x" type="image/webp">
-                <img
-                  class="portfolio-project img-responsive"
-                  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                  srcset="/images/clients/kanba.png 1x, /images/clients/kanba@2x.png 2x"
-                  data-src="/images/clients/kanba.png"
-                  data-srcset="/images/clients/kanba.png 1x, /images/clients/kanba@2x.png 2x"
-                  alt="Kanba"
-                />
-              </picture>
-
-            </a>
-          </div>
-          
-          <div class="clients__item">
-            <a href="https://radity.com">
-              
-              
-              
-              
-              
-            
-              <picture class="picture clients">
-                <source srcset="/images/clients/zoo-tv_hu5508937950425581870.webp 1x, /images/clients/zoo-tv@2x_hu5464987768153765929.webp 2x" type="image/webp" />
-                <source srcset="/images/clients/zoo-tv.png 1x, /images/clients/zoo-tv@2x.png 2x" type="image/webp">
-                <img
-                  class="portfolio-project img-responsive"
-                  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                  srcset="/images/clients/zoo-tv.png 1x, /images/clients/zoo-tv@2x.png 2x"
-                  data-src="/images/clients/zoo-tv.png"
-                  data-srcset="/images/clients/zoo-tv.png 1x, /images/clients/zoo-tv@2x.png 2x"
-                  alt="Zoo"
-                />
-              </picture>
-
-            </a>
-          </div>
-          
-          <div class="clients__item">
-            <a href="https://radity.com">
-              
-              
-              
-              
-              
-            
-              <picture class="picture clients">
-                <source srcset="/images/clients/ztos_hu6081412116948057356.webp 1x, /images/clients/ztos@2x_hu1223023162903560515.webp 2x" type="image/webp" />
-                <source srcset="/images/clients/ztos.png 1x, /images/clients/ztos@2x.png 2x" type="image/webp">
-                <img
-                  class="portfolio-project img-responsive"
-                  src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                  srcset="/images/clients/ztos.png 1x, /images/clients/ztos@2x.png 2x"
-                  data-src="/images/clients/ztos.png"
-                  data-srcset="/images/clients/ztos.png 1x, /images/clients/ztos@2x.png 2x"
-                  alt="Ztos"
-                />
-              </picture>
-
-            </a>
-          </div>
           
         </div>
       </div>
@@ -565,12 +393,12 @@
     >
       
       <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
-        <h3>Radity Finance - UI Kit</h3>
+        <h3>Using a gel elastomer to model skin-texture interaction and improve neural code prediction</h3>
         <p class="lead">
-          We have been receiving a lot of requests for a Finance Kit recently due to the popularity of Fintech.
+          Neuroscience Bachelor thesis
         </p>
-        <a href="http://localhost:1313/" class="btn btn-primary"
-          >Case Study<i class="icon-arrow-right"></i
+        <a href="http://localhost:1313/blog/sample/" class="btn btn-primary"
+          >description<i class="icon-arrow-right"></i
         ></a>
       </div>
       <div class="col-12 col-md-7 pl-md-0 text-right">
@@ -588,7 +416,7 @@
             srcset="/images/works/radity-finance.jpg 1x, /images/works/radity-finance@2x.jpg 2x"
             data-src="/images/works/radity-finance.jpg"
             data-srcset="/images/works/radity-finance.jpg 1x, /images/works/radity-finance@2x.jpg 2x"
-            alt="Radity Finance - UI Kit"
+            alt="Using a gel elastomer to model skin-texture interaction and improve neural code prediction"
           />
         </picture>
 
@@ -672,117 +500,6 @@
 
 	
 	
-<section class="section rad-animation-group section--border-bottom">
-    <div class="container">
-        <h2 class="rad-fade-down">Testimonials</h2>
-        <div class="row row--padded mb-0 rad-fade-down">
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Cold calling can be a great way to generate quality leads. You get to speak to the gatekeepers and stakeholders, and you get a great insight into their requirements and influences. But cold calling is an art-form. It can be daunting, it’s always a lot of work, and you always need to make a good impression.
-                </p>
-                <div class="testimonial__author">
-                         
-                         
-                         
-                         
-                       
-                       
-                         <picture>
-                           <source srcset="/images/testimonials/daniel-jordan_hu11009894959731666840.webp 1x, /images/testimonials/daniel-jordan@2x_hu7813673516879846642.webp 2x" type="image/webp" />
-                           <source srcset="/images/testimonials/daniel-jordan.jpg 1x, /images/testimonials/daniel-jordan@2x.jpg 2x" type="image/webp">
-                           <img
-                             width="52"
-                             height="52"
-                             class="lozad img-responsive"
-                             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                             srcset="/images/testimonials/daniel-jordan.jpg 1x, /images/testimonials/daniel-jordan@2x.jpg 2x"
-                             data-src="/images/testimonials/daniel-jordan.jpg"
-                             data-srcset="/images/testimonials/daniel-jordan.jpg 1x, /images/testimonials/daniel-jordan@2x.jpg 2x"
-                             alt="Daniel Jordan"
-                           />
-                         </picture>
-                    
-                         <div class="testimonial__author-info">
-                        <h3>Daniel Jordan</h3>
-                        <span>Phonet, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Whether you or your loved one is encountering the natural decrease in mobility that occurs with the passing of time, or deals with an illness-related lack of physical agility, a stair lift can be the ideal way to put you in charge of your home again. Regardless of the shape or make of your living accommodation.
-                </p>
-                <div class="testimonial__author">
-                         
-                         
-                         
-                         
-                       
-                       
-                         <picture>
-                           <source srcset="/images/testimonials/jonathan-peters_hu9661064999477647103.webp 1x, /images/testimonials/jonathan-peters@2x_hu16836070213931677264.webp 2x" type="image/webp" />
-                           <source srcset="/images/testimonials/jonathan-peters.jpg 1x, /images/testimonials/jonathan-peters@2x.jpg 2x" type="image/webp">
-                           <img
-                             width="52"
-                             height="52"
-                             class="lozad img-responsive"
-                             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                             srcset="/images/testimonials/jonathan-peters.jpg 1x, /images/testimonials/jonathan-peters@2x.jpg 2x"
-                             data-src="/images/testimonials/jonathan-peters.jpg"
-                             data-srcset="/images/testimonials/jonathan-peters.jpg 1x, /images/testimonials/jonathan-peters@2x.jpg 2x"
-                             alt="Jonathan Peters"
-                           />
-                         </picture>
-                    
-                         <div class="testimonial__author-info">
-                        <h3>Jonathan Peters</h3>
-                        <span>Textic, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance in the achievement of increased business exposure and business sales. If your business already has a bunch of printed cards distributed to a number of potential customers and yet.
-                </p>
-                <div class="testimonial__author">
-                         
-                         
-                         
-                         
-                       
-                       
-                         <picture>
-                           <source srcset="/images/testimonials/antonio-willis_hu285661273275573299.webp 1x, /images/testimonials/antonio-willis@2x_hu9792004273425314479.webp 2x" type="image/webp" />
-                           <source srcset="/images/testimonials/antonio-willis.jpg 1x, /images/testimonials/antonio-willis@2x.jpg 2x" type="image/webp">
-                           <img
-                             width="52"
-                             height="52"
-                             class="lozad img-responsive"
-                             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                             srcset="/images/testimonials/antonio-willis.jpg 1x, /images/testimonials/antonio-willis@2x.jpg 2x"
-                             data-src="/images/testimonials/antonio-willis.jpg"
-                             data-srcset="/images/testimonials/antonio-willis.jpg 1x, /images/testimonials/antonio-willis@2x.jpg 2x"
-                             alt="Antonio Willis"
-                           />
-                         </picture>
-                    
-                         <div class="testimonial__author-info">
-                        <h3>Antonio Willis</h3>
-                        <span>Cyberse, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
 
 	
 	
@@ -863,7 +580,7 @@
         <script src='http://localhost:1313/js/subscription.js'></script>
       </div>
       <small id="emailHelp" class="form-text text-muted"
-        >We&#39;ll never share your email with anyone else.</small
+        >I&#39;ll never share your email with anyone else.</small
       >
     </div>
   </div>
