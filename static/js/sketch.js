@@ -1,7 +1,7 @@
 let walkers = [];
 let attractRadius = 80;  // Distance within which walkers are attracted to the mouse
 let contagionRadius = 70;  // Distance for social contagion effect
-let maxVelocity = 5;       // Adjusted velocity for smoother movement
+let maxVelocity = 3;       // Adjusted velocity for smoother movement
 let fadeDuration = 2500;   // Duration before fading back to original color
 let numWalkers = 125;
 let isMobile;              // Variable to check if it's a mobile device
