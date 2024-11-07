@@ -46,77 +46,65 @@ function draw() {
     }
   }
 }
-
 class Walker {
   constructor() {
     this.pos = createVector(random(width), random(height));
     this.color = randomPastelColor(); // Assign a unique pastel color at creation
     this.originalColor = this.color;   // Store the original color
-    this.isContagion = false;           // Track if this walker has turned red
-    this.fadeStartTime = null;          // Track when to start fading
+    this.isContagion = false;          // Track if this walker has turned red
+    this.fadeStartTime = null;         // Track when to start fading
+    this.noiseOffsetX = random(1000);  // Initialize Perlin noise offsets for smooth motion
+    this.noiseOffsetY = random(1000);
   }
 
   update(walkers) {
-    // Use mouse or touch position based on device type
     let mouse = createVector(isMobile && touches.length > 0 ? touchX[0] : mouseX, 
                              isMobile && touches.length > 0 ? touchY[0] : mouseY);
     let d = p5.Vector.dist(this.pos, mouse);
 
+    // Perlin noise for smoother random movement
+    this.pos.x += (noise(this.noiseOffsetX) - 0.5) * maxVelocity;
+    this.pos.y += (noise(this.noiseOffsetY) - 0.5) * maxVelocity;
+
+    this.noiseOffsetX += 0.01;  // Increment noise offset for continuous movement
+    this.noiseOffsetY += 0.01;
+
     if (d < attractRadius) {
-      // Change color to red when near mouse
-      this.pos.x += random(-maxVelocity / 2, maxVelocity / 2);
-      this.pos.y += random(-maxVelocity / 2 , maxVelocity / 2);
-      this.color = color(255, 0, 0); // Change to red when near mouse
-      this.isContagion = true;        // Mark this walker as contagious
-      this.fadeStartTime = millis();  // Start fading timer
-    } else if ((this.fadeStartTime && millis() - this.fadeStartTime > fadeDuration) && this.isContagion == true) {
-      // Fade back to original color after fadeDuration
-      this.pos.x += random(-maxVelocity , maxVelocity );
-       this.pos.y += random(-maxVelocity , maxVelocity);
+      this.color = color(255, 0, 0);
+      this.isContagion = true;
+      this.fadeStartTime = millis();
+      let force = p5.Vector.sub(mouse, this.pos);
+      force.setMag(maxVelocity / 2); // Slower attraction force
+      this.pos.add(force);
+    } else if (this.fadeStartTime && millis() - this.fadeStartTime > fadeDuration) {
       this.color = lerpColor(this.color, this.originalColor, 0.1);
-      
       if (dist(this.color.levels[0], this.originalColor.levels[0], 
                 this.color.levels[1], this.originalColor.levels[1], 
                 this.color.levels[2], this.originalColor.levels[2]) < 1) {
-        this.fadeStartTime = null;  // Stop fading when close to original
-        this.isContagion = false;        // Mark this walker as contagious
+        this.fadeStartTime = null;
+        this.isContagion = false;
       }
-    } else {
-      // Move randomly if outside the attraction radius
-      this.pos.x += random(-maxVelocity / 2, maxVelocity / 2);
-      this.pos.y += random(-maxVelocity / 2, maxVelocity / 2);
     }
 
-    // Proximity check for contagion effect
     for (let other of walkers) {
-      if (other !== this) {
-        let d = p5.Vector.dist(this.pos, other.pos);
-        if (d < contagionRadius && other.isContagion) {
-          if (random() < 0.8) { // 60% chance to become red
-            this.color = color(255, 0, 0); // Change to red
-            this.isContagion = true; // Mark as contagious
-            this.fadeStartTime = millis(); // Start fading timer
-          }
+      if (other !== this && p5.Vector.dist(this.pos, other.pos) < contagionRadius && other.isContagion) {
+        if (random() < 0.8) {
+          this.color = color(255, 0, 0);
+          this.isContagion = true;
+          this.fadeStartTime = millis();
         }
       }
     }
 
-    // Attraction towards the mouse if outside the radius
-    if (d < attractRadius) {
-      // If within the attraction radius, move towards the mouse
-      let force = p5.Vector.sub(mouse, this.pos);
-      force.setMag(maxVelocity);  // Adjust the strength of attraction
-      this.pos.add(force);
-    }
-
-    // Constrain walker to canvas
     this.pos.x = constrain(this.pos.x, 0, width);
     this.pos.y = constrain(this.pos.y, 0, height);
   }
+
 
   show() {
     noStroke();
     fill(this.color);
     ellipse(this.pos.x, this.pos.y, 12, 12); // Draw circles instead of points
   }
+
 }
