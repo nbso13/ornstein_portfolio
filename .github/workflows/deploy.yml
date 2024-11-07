@@ -40,11 +40,12 @@ jobs:
 
       - name: List files in public directory
         run: ls -R ./public
-        
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+          force_orphan: true
       
