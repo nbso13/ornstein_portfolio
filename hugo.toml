@@ -1,6 +1,7 @@
-baseURL = "https://nbso13.github.io/ornstein_portfolio"
+baseURL = "http://nbso13.github.io/ornstein_portfolio/"
 languageCode = "en-us"
 theme = "adritian-free-hugo-theme"
+
 
 # Plugins
 [params.plugins]

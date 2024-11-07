@@ -1,10 +1,13 @@
 
 show_sketch: true
-
+# page title
+head:
+  title: "Nicholas Ornstein's Website"
+  description: "This is my portfolio website."
 # showcase
 showcase:
   enable: true
-  title: "Hey, I'm Nick."
+  title: "Hello !"
   # subtitle: ""
   description: >
    I'm a civic technologist and with a background in analytics and neuroscience, 
@@ -107,8 +110,8 @@ client_and_work:
         _2x: "images/works/radity-finance@2x.jpg"
       is_even: true
 
-    - title: "Swiss Fintech Website"
-      description: "The Swiss Finance + Technology Association is the leading FinTech hub in Switzerland."
+    - title: "Canvassing Strategy in the Houston Suburbs"
+      description: "My recommendations as a Bluebonnet Data Fellow in the 2022 race for Texas House District 132"
       button:
         icon: "icon-arrow-right"
         btnText: "Case Study"
@@ -118,8 +121,8 @@ client_and_work:
         _2x: "images/works/swissfintech@2x.jpg"
       is_even: false
 
-    - title: "Robo Advisor"
-      description: "Robo Advisor is a Swiss Wealth Manager and wants to create the best digital experience for its UNHW clients across the world. We started with a whiteboard."
+    - title: "Generational Return: A trip to my grandmother's hometown in rural Hungary"
+      description: "The story of a curious young documentarian, a study of storytelling media over time, and the quest to find the grave of my great-great-grandfather"
       button:
         icon: "icon-arrow-right"
         btnText: "Case Study"
@@ -128,6 +131,28 @@ client_and_work:
         x: "images/works/robo-advisor.jpg"
         _2x: "images/works/robo-advisor@2x.jpg"
       is_even: true
+
+    - title: "Immersive Virtual Reality and the Child’s Well-being"
+      description: "A presentation and publication evaluating arguments for and against VR for  children, drawing on Zuboff's Surveillance Capitalism and the philosophy of childhood"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study"
+        URL: "#"
+      image:
+        x: "images/works/robo-advisor.jpg"
+        _2x: "images/works/robo-advisor@2x.jpg"
+      is_even: true
+
+    - title: "Electrical Muscle Stimulation for Rhythm Learning"
+      description: "Investigating the utility of proprioceptive interfaces for motor learning (Fulbright research project)"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study"
+        URL: "#"
+      image:
+        x: "images/works/robo-advisor.jpg"
+        _2x: "images/works/robo-advisor@2x.jpg"
+      is_even: false
 
 # testimonial
 testimonial:
