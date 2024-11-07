@@ -38,10 +38,13 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: List files in public directory
+        run: ls -R ./public
+        
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/master'  # or main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+      
