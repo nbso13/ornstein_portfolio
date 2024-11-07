@@ -3,31 +3,39 @@ name: Build and Deploy Hugo Site
 on:
   push:
     branches:
-      - master  # Trigger the workflow when changes are pushed to the 'main' branch (change this to your default branch)
+      - master  # or 'main' depending on your default branch
+
+permissions:
+  contents: write  # This is important for deploying to gh-pages
 
 jobs:
   build:
-    runs-on: macos-latest  # You can change this to the operating system of your choice
+    runs-on: ubuntu-latest  # Ubuntu is generally more reliable for CI/CD
+    
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
-    # Checkout the repository
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # If you're using git submodules for themes
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-    # Set up Hugo
-    - name: Set up Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.112.5'  # Set the Hugo version you want to use
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.112.5'
+          extended: true    # If you need SCSS/SASS processing
 
-    # Build the site
-    - name: Build the Hugo site
-      run: hugo
+      - name: Build
+        run: hugo --minify
 
-    # Deploy to gh-pages branch
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}  # Automatically uses the GITHUB_TOKEN for authentication
-        publish_dir: ./public  # Directory to publish (the output of your Hugo site build)
-        publish_branch: gh-pages  # The branch to deploy to
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/master' # or 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
