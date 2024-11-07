@@ -1,0 +1,4 @@
+{{- /* loads p5.js and your sketch */ -}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+{{ $sketch := resources.Get "js/sketch.js" | minify }}
+<script src="{{ $sketch.RelPermalink }}"></script>

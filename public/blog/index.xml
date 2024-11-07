@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on </title>
-    <link>http://localhost:1313/ornstein_portfolio/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blogs on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Jun 2024 14:38:33 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/ornstein_portfolio/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World! New website, new me.</title>
-      <link>http://localhost:1313/ornstein_portfolio/blog/sample/</link>
+      <link>http://localhost:1313/blog/sample/</link>
       <pubDate>Sun, 23 Jun 2024 14:38:33 +0200</pubDate>
-      <guid>http://localhost:1313/ornstein_portfolio/blog/sample/</guid>
+      <guid>http://localhost:1313/blog/sample/</guid>
       <description>&lt;p&gt;Hello World! I&amp;rsquo;m sitting in a Pret in Paris right now, having just finished Paul Auster&amp;rsquo;s &lt;strong&gt;(fantastic)&lt;/strong&gt; &lt;em&gt;New York Trilogy&lt;/em&gt;, putting together some thoughts on where I&amp;rsquo;ve been and where I want to go professionally, as a bit of an introduction to this portfolio website in the making. Here goes nothing:&lt;/p&gt;&#xA;&lt;p&gt;After school at UChicago (see some other blog post for thoughts on those experiences), hoping to continue to build my research chops and learn more about my family&amp;rsquo;s life in Europe post-war as survivors, I earned a Fulbright  and moved to Munich Germany. On the research side, I worked in Professor Albrecht Schmidt&amp;rsquo;s lab under Professor Lewis Chuang. I learned how to write clean research code, build and test an HCI artifact (EMS system for rhythm learning), and fit into an interdisciplinary research group. On the cultural side, I learned some basic German and joined a &lt;a href=&#34;https://www.instagram.com/yudid_official/&#34;&gt;funk and soul band&lt;/a&gt; as a keyboardist and vocalist, and started to play gigs around the city&amp;ndash;highlights included Bahnwärter Thiel, the Lost Weekend, Killian&amp;rsquo;s, Kennedy&amp;rsquo;s, and Minna Thiel. I also explored my family&amp;rsquo;s history in Szendro, Hungary - read more about that project in another blog post.&lt;/p&gt;</description>
     </item>
   </channel>
