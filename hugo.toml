@@ -1,4 +1,4 @@
-baseURL = "https://nbso13.github.io/ornstein-portfolio/""
+baseURL = "https://nbso13.github.io/ornstein-portfolio/"
 languageCode = "en-us"
 theme = "adritian-free-hugo-theme"
 
