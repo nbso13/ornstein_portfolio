@@ -1,0 +1,33 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when changes are pushed to the 'main' branch (change this to your default branch)
+
+jobs:
+  build:
+    runs-on: macos-latest  # You can change this to the operating system of your choice
+
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up Hugo
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.135.0'  # Set the Hugo version you want to use
+
+    # Build the site
+    - name: Build the Hugo site
+      run: hugo
+
+    # Deploy to gh-pages branch
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # Automatically uses the GITHUB_TOKEN for authentication
+        publish_dir: ./public  # Directory to publish (the output of your Hugo site build)
+        publish_branch: gh-pages  # The branch to deploy to
