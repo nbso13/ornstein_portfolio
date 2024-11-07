@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://nbso13.github.io/ornstein_portfolio"
 languageCode = "en-us"
 theme = "adritian-free-hugo-theme"
 
