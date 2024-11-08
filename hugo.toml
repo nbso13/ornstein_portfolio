@@ -1,4 +1,4 @@
-baseURL = "http://nicholasornstein.com/"
+baseURL = "https://nicholasornstein.com/"
 languageCode = "en-us"
 theme = "adritian-free-hugo-theme"
 
