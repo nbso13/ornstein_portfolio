@@ -55,12 +55,19 @@ class Walker {
     this.fadeStartTime = null;         // Track when to start fading
     this.noiseOffsetX = random(1000);  // Initialize Perlin noise offsets for smooth motion
     this.noiseOffsetY = random(1000);
+    this.lastSeedResetTime = millis(); // Track the time of last seed reset
   }
 
   update(walkers) {
     let mouse = createVector(isMobile && touches.length > 0 ? touchX[0] : mouseX, 
                              isMobile && touches.length > 0 ? touchY[0] : mouseY);
     let d = p5.Vector.dist(this.pos, mouse);
+
+    // Reset Perlin noise seed every 10 seconds for more randomness
+    if (millis() - this.lastSeedResetTime > 10000) {
+      randomSeed(floor(random(10000)));  // Reset random seed for Perlin noise
+      this.lastSeedResetTime = millis(); // Update the last reset time
+    }
 
     // Perlin noise for smoother random movement
     this.pos.x += (noise(this.noiseOffsetX) - 0.5) * maxVelocity;
@@ -100,11 +107,9 @@ class Walker {
     this.pos.y = constrain(this.pos.y, 0, height);
   }
 
-
   show() {
     noStroke();
     fill(this.color);
     ellipse(this.pos.x, this.pos.y, 12, 12); // Draw circles instead of points
   }
-
 }
