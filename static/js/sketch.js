@@ -2,7 +2,7 @@ let walkers = [];
 let attractRadius = 80;  // Distance within which walkers are attracted to the mouse
 let contagionRadius = 70;  // Distance for social contagion effect
 let maxVelocity = 3;       // Adjusted velocity for smoother movement
-let fadeDuration = 1250;   // Duration before fading back to original color
+let fadeDuration = 1000;   // Duration before fading back to original color
 let numWalkers = 125;
 let isMobile;              // Variable to check if it's a mobile device
 
@@ -53,7 +53,7 @@ class Walker {
     this.pos = createVector(random(width), random(height));
     this.color = randomPastelColor(); // Assign a unique pastel color at creation
     this.originalColor = this.color;   // Store the original color
-    this.isContagion = false;          // Track if this walker has turned red
+    this.isContagion = false;          // Track if this walker is currently red (infectious)
     this.fadeStartTime = null;         // Track when to start fading
     this.noiseOffsetX = random(1000);  // Initialize Perlin noise offsets for smooth motion
     this.noiseOffsetY = random(1000);
@@ -71,29 +71,21 @@ class Walker {
     this.noiseOffsetX += 0.01;  // Increment noise offset for continuous movement
     this.noiseOffsetY += 0.01;
 
+    // If within attraction radius, turn red and be contagious
     if (d < attractRadius) {
-      this.color = color(255, 0, 0);
-      this.isContagion = true;
-      this.fadeStartTime = millis();
+      this.turnRed();
       let force = p5.Vector.sub(mouse, this.pos);
       force.setMag(maxVelocity / 2); // Slower attraction force
       this.pos.add(force);
     } else if (this.fadeStartTime && millis() - this.fadeStartTime > fadeDuration) {
-      this.color = lerpColor(this.color, this.originalColor, 0.1);
-      if (dist(this.color.levels[0], this.originalColor.levels[0], 
-                this.color.levels[1], this.originalColor.levels[1], 
-                this.color.levels[2], this.originalColor.levels[2]) < 1) {
-        this.fadeStartTime = null;
-        this.isContagion = false;
-      }
+      this.fadeBackToOriginalColor();
     }
 
+    // Contagion effect: only turn red if near an actively red walker
     for (let other of walkers) {
       if (other !== this && p5.Vector.dist(this.pos, other.pos) < contagionRadius && other.isContagion) {
         if (random() < 0.8) {
-          this.color = color(255, 0, 0);
-          this.isContagion = true;
-          this.fadeStartTime = millis();
+          this.turnRed();
         }
       }
     }
@@ -104,6 +96,21 @@ class Walker {
     if (this.pos.y < 0) this.pos.y = height;
     if (this.pos.y > height) this.pos.y = 0;
   }
+
+  // Method to turn the walker red and start contagion
+  turnRed() {
+    this.color = color(255, 0, 0);
+    this.isContagion = true;
+    this.fadeStartTime = millis();
+  }
+
+  // Method to fade back to original pastel color over time
+  fadeBackToOriginalColor() {
+    
+      this.color = this.originalColor; // Ensure exact original color
+      this.isContagion = false;        // No longer infectious
+      this.fadeStartTime = null;       // Reset fade timer
+    }
 
   show() {
     noStroke();
