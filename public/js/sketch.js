@@ -2,7 +2,7 @@ let walkers = [];
 let attractRadius = 80;  // Distance within which walkers are attracted to the mouse
 let contagionRadius = 70;  // Distance for social contagion effect
 let maxVelocity = 3;       // Adjusted velocity for smoother movement
-let fadeDuration = 2500;   // Duration before fading back to original color
+let fadeDuration = 1250;   // Duration before fading back to original color
 let numWalkers = 125;
 let isMobile;              // Variable to check if it's a mobile device
 
@@ -30,12 +30,7 @@ function draw() {
   // Set a soft light blue background
   background(220, 240, 255); // Light blue color for the background
 
-  for (let w of walkers) {
-    w.update(walkers); // Pass the array of walkers for contagion effect
-    w.show();
-  }
-
-  // Draw lines between walkers that are close to each other
+  // Draw lines between walkers that are close to each other first (underneath)
   stroke(0); // Set line color to black
   for (let i = 0; i < walkers.length; i++) {
     for (let j = i + 1; j < walkers.length; j++) {
@@ -45,7 +40,14 @@ function draw() {
       }
     }
   }
+
+  // Now draw the walkers (dots) on top of the lines
+  for (let w of walkers) {
+    w.update(walkers); // Pass the array of walkers for contagion effect
+    w.show();
+  }
 }
+
 class Walker {
   constructor() {
     this.pos = createVector(random(width), random(height));
@@ -55,19 +57,12 @@ class Walker {
     this.fadeStartTime = null;         // Track when to start fading
     this.noiseOffsetX = random(1000);  // Initialize Perlin noise offsets for smooth motion
     this.noiseOffsetY = random(1000);
-    this.lastSeedResetTime = millis(); // Track the time of last seed reset
   }
 
   update(walkers) {
     let mouse = createVector(isMobile && touches.length > 0 ? touchX[0] : mouseX, 
                              isMobile && touches.length > 0 ? touchY[0] : mouseY);
     let d = p5.Vector.dist(this.pos, mouse);
-
-    // Reset Perlin noise seed every 10 seconds for more randomness
-    if (millis() - this.lastSeedResetTime > 10000) {
-      randomSeed(floor(random(10000)));  // Reset random seed for Perlin noise
-      this.lastSeedResetTime = millis(); // Update the last reset time
-    }
 
     // Perlin noise for smoother random movement
     this.pos.x += (noise(this.noiseOffsetX) - 0.5) * maxVelocity;
@@ -103,8 +98,11 @@ class Walker {
       }
     }
 
-    this.pos.x = constrain(this.pos.x, 0, width);
-    this.pos.y = constrain(this.pos.y, 0, height);
+    // Check if walker is out of bounds and wrap around to the other side
+    if (this.pos.x < 0) this.pos.x = width;
+    if (this.pos.x > width) this.pos.x = 0;
+    if (this.pos.y < 0) this.pos.y = height;
+    if (this.pos.y > height) this.pos.y = 0;
   }
 
   show() {
