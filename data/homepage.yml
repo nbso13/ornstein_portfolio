@@ -63,8 +63,8 @@ about:
     btnText: "About Me"
     URL: "https://www.linkedin.com/in/nicholas-benjamin-ornstein"
   image:
-    x: "images/who-am-i/user-picture.png"
-    _2x: "images/who-am-i/user-picture@2x.png"
+    x: "images/who-am-i/headshot.jpeg"
+    _2x: "images/who-am-i/headshot.jpeg"
 
 # education
 education:
@@ -99,33 +99,44 @@ client_and_work:
   title: "Projects"
   enable: true
   works:
+    - title: "Dealing with the Traveling Salesman Problem - Literally"
+      description: "Directing canvassers as a Data Organizer for the 2024 Montana Senator campaign"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Blog Post"
+        URL: "blog/sample/"
+      image:
+        x: "images/works/gel_elastomer.png"
+        _2x: "images/works/gel_elastomer.png"
+      is_even: true
+
     - title: "Using a gel elastomer to model skin-texture interaction and improve neural code prediction"
       description: "Neuroscience Bachelor thesis"
       button:
         icon: "icon-arrow-right"
-        btnText: "description"
+        btnText: "Thesis paper + Presentation video"
         URL: "blog/sample/"
       image:
-        x: "images/works/radity-finance.jpg"
-        _2x: "images/works/radity-finance@2x.jpg"
+        x: "images/works/gel_elastomer.png"
+        _2x: "images/works/gel_elastomer.png"
       is_even: true
 
-    - title: "Canvassing Strategy in the Houston Suburbs"
-      description: "My recommendations as a Bluebonnet Data Fellow in the 2022 race for Texas House District 132"
+    - title: "Adventures in a Funk Cover Band"
+      description: "Grooving with Yudid (keyboards, vocals) through the pubs of Munich, Germany"
       button:
         icon: "icon-arrow-right"
-        btnText: "Case Study"
-        URL: "#"
+        btnText: "pictures + videos"
+        URL: "blog/sample/"
       image:
-        x: "images/works/swissfintech.jpg"
-        _2x: "images/works/swissfintech@2x.jpg"
-      is_even: false
+        x: "images/works/gel_elastomer.png"
+        _2x: "images/works/gel_elastomer.png"
+      is_even: true
 
     - title: "Generational Return: A trip to my grandmother's hometown in rural Hungary"
       description: "The story of a curious young documentarian, a study of storytelling media over time, and the quest to find the grave of my great-great-grandfather"
       button:
         icon: "icon-arrow-right"
-        btnText: "Case Study"
+        btnText: "Blog post + pictures"
         URL: "#"
       image:
         x: "images/works/robo-advisor.jpg"
@@ -136,7 +147,7 @@ client_and_work:
       description: "A presentation and publication evaluating arguments for and against VR for  children, drawing on Zuboff's Surveillance Capitalism and the philosophy of childhood"
       button:
         icon: "icon-arrow-right"
-        btnText: "Case Study"
+        btnText: "Book chapter + symposium presentation"
         URL: "#"
       image:
         x: "images/works/robo-advisor.jpg"
@@ -147,12 +158,122 @@ client_and_work:
       description: "Investigating the utility of proprioceptive interfaces for motor learning (Fulbright research project)"
       button:
         icon: "icon-arrow-right"
-        btnText: "Case Study"
+        btnText: "Workshop paper + project description"
         URL: "#"
       image:
         x: "images/works/robo-advisor.jpg"
         _2x: "images/works/robo-advisor@2x.jpg"
-      is_even: false
+      is_even: true
+
+    - title: "Canvassing Strategy in the Houston Suburbs"
+      description: "My recommendations as a Bluebonnet Data Fellow in the 2022 race for Texas House District 132"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true
+
+    - title: "Comparing Word Embedding Methods"
+      description: "A final project in Computational Linguistics"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true
+
+    - title: "Do lancelets have telencephalons?"
+      description: "A final project in Evolutionary Neuroscience"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true
+
+    - title: "The Green Mill: documenting the story of a Chicago Pub through the 20th century"
+      description: "A documentary proposal (Chicago Film History final project)"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true  
+
+    - title: "Theorizing Videotelephony in the Pandemic"
+      description: "A critical treatment of video conferencing during COVID"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true 
+
+    - title: "N. Katherine Hayles: Chemist to Literary Theorist of Science and Technology"
+      description: "A final paper in the History of Social Sciences"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true  
+
+    - title: "Trump and the politicization of science"
+      description: "A pre-pandemic campus journal article evaluating how the Trump Administration politicized science to a new level"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true  
+
+    - title: "Scoring Streetcar"
+      description: "Performing an original score to the University Theater's production of 'A Streetcar Named Desire'"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Case Study + code + slide deck"
+        URL: "#"
+      image:
+        x: "images/works/tiled_output.png"
+        _2x: "images/works/tiled_output.png"
+      is_even: true  
+
+    - title: "Expertise Makes the Artist: Exploring Arguments for Computer Artists"
+      description: "A summer project in the humanities of technology at the College Summer Institute at UChicago"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Final paper"
+        URL: "#"
+      image:
+        x: "images/works/robo-advisor.jpg"
+        _2x: "images/works/robo-advisor@2x.jpg"
+      is_even: true
+
+    - title: "MealFlour/Gusarina: A short documentary about mealworm farming in Xela, Guatemala"
+      description: "A documentary I shot while spending a summer in Xela, Guatemala as an intern at MealFlour, a nutrition social enterprise"
+      button:
+        icon: "icon-arrow-right"
+        btnText: "Video + blog post"
+        URL: "#"
+      image:
+        x: "images/works/robo-advisor.jpg"
+        _2x: "images/works/robo-advisor@2x.jpg"
+      is_even: true
 
 # testimonial
 testimonial:
