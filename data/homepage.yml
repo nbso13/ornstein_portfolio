@@ -1,4 +1,9 @@
-
+# to do: 
+# implement tutoring tab
+# implement music tab
+# add pictures to all project posts
+# write blog posts for all projects or attach the paper/link
+# edit down the project posts so that the best are highlighted
 show_sketch: true
 # page title
 head:
@@ -6,21 +11,16 @@ head:
   description: "This is my portfolio website."
 # showcase
 showcase:
-  enable: true
+  enable: false
   title: "Hello !"
   # subtitle: ""
   description: >
-   I'm a civic technologist and with a background in analytics and neuroscience, 
-   looking for analyst jobs at non-profits and progressive political organizations. 
-   I just finished a job at Amazon Ads, before which I worked as a Fulbright Scholar in 
-   Dr. Albrecht Schmidt's  <a target='lab' href='https://www.um.informatik.uni-muenchen.de/index.html'>lab</a> 
-   at the LMU Munich under Dr. Lewis Chuang. I'm also an indie rock singer-songwriter trained on jazz keys.
    
   image:
-    x: "images/showcase/showcase.png"
-    _2x: "images/showcase/showcase@2x.png"
+    x: "images/showcase/me_in_action.PNG"
+    _2x: "images/showcase/me_in_action.PNG"
   imageMobile:
-    x: "images/showcase/showcase-mobile.jpg"
+    x: "images/showcase/me_in_action.PNG"
 
   button:
     icon: "icon-mail-fill"
@@ -43,32 +43,39 @@ showcase:
 # about
 about:
   enable: true
-  title: "Bio"
+  title: "Hi!"
   content: >
     <p class="lead">
-      I was born and grew up outside Boston, MA, and completed my BSc. in Neuroscience at the University of Chicago in 2021.
-      </p>
-      <p class="lead">
-      After school, hoping to continue to build my research chops and learn more 
-      about my family's life in Europe post-war as survivors, I earned a Fulbright 
-      and moved to Munich Germany. On the research side, I worked in Professor Albrecht Schmidt's 
-      lab under Professor Lewis Chuang. I then did some data work on a Texas House campaign via 
-      Bluebonnet Data back stateside, before starting a Data Analyst role at Amazon Germany in December 2022.
-      In July 2024, I decided I was ready to explore new opportunities and prepare to apply to graduate programs,
-      and moved back to the Boston area.
-      </p>
+    I'm Nick, a researcher/data analyst/civic technologist with a background in neuroscience and human-computer interaction. 
+    </p>
+
+    <p class="lead">
+    My research interests lie in computational social science, specifically, the use of network science
+      to study online communities, misinformation, and political communication.
+    </p>
+
+    <p class="lead">
+    My undergrad research was in computational neuroscience, studying texture perception at UChicago's Bensmaia Lab. 
+    After school, I moved to Munich on a Fulbright, working under Professors Lewis Chuang and Albrecht Schmidt at LMU Munich 
+    on electrical muscle stimulation for rhythm learning. After my Fulbright ended, I joined Amazon Germany as a Data Analyst.
+    I moved back stateside in 2024 to help out on the election, cutting turf routing organizers, and automating processes for
+    the Tester campaign for the Montana Senate seat. In January 2025, I will start as an Analyst at Eastern Research Group, working on
+    software, UI design, and analysis projects for the EPA and other federal clients. You can find me on the 
+    <a href="https://x.com/OrnsteinNick">platform formerly known as Twitter</a> or on <a href="https://bsky.app/profile/nickornstein.bsky.social">Bluesky</a>.
+    </p>
+    
      
   button:
     icon: "icon-smile-fill"
-    btnText: "About Me"
-    URL: "https://www.linkedin.com/in/nicholas-benjamin-ornstein"
+    btnText: "LinkedIn"
+    URL: 
   image:
     x: "images/who-am-i/headshot.jpeg"
     _2x: "images/who-am-i/headshot.jpeg"
 
 # education
 education:
-  enable: true
+  enable: false
   title: "Education"
   items:
     - university: "The University of Chicago"
@@ -92,189 +99,293 @@ experience:
   button2:
     icon: "icon-profile-fill"
     btnText: "Download My Resume"
-    URL: "/ornstein_resume_2024.pdf"
+    URL: "ornstein_resume_2024.pdf"
+  button3:
+    icon: "icon-profile-fill"
+    btnText: "Download my CV"
+    URL: "ornstein_cv_2024.pdf"
 
 # Client & Work
 client_and_work:
   title: "Projects"
   enable: true
   works:
-    - title: "Dealing with the Traveling Salesman Problem - Literally"
-      description: "Directing canvassers as a Data Organizer for the 2024 Montana Senator campaign"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Blog Post"
-        URL: "blog/sample/"
-      image:
-        x: "images/works/gel_elastomer.png"
-        _2x: "images/works/gel_elastomer.png"
-      is_even: true
+    # - title: "On the Flixbus to Mantova"
+    #   description: ""
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "poem"
+    #     URL: "content/blog/on_the_flixbus_to_mantova.md"
+    #   image:
+    #     x: "images/works/gemini_photo.jpeg"
+    #     _2x: "images/works/gemini_photo.jpeg"
+    #   is_even: true
 
     - title: "Using a gel elastomer to model skin-texture interaction and improve neural code prediction"
       description: "Neuroscience Bachelor thesis"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Thesis paper + Presentation video"
-        URL: "blog/sample/"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Thesis paper + Presentation video + slides"
+          URL: "https://drive.google.com/drive/folders/1c4tkDNgwAKbRp37O5ReROIX38zNTu0W3?usp=drive_link" 
+        - icon: "icon-arrow-right"
+          btnText: "code"
+          URL: "https://github.com/nbso13/bensmaia_gelsight_scripts" 
       image:
         x: "images/works/gel_elastomer.png"
         _2x: "images/works/gel_elastomer.png"
       is_even: true
 
-    - title: "Adventures in a Funk Cover Band"
-      description: "Grooving with Yudid (keyboards, vocals) through the pubs of Munich, Germany"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "pictures + videos"
-        URL: "blog/sample/"
-      image:
-        x: "images/works/gel_elastomer.png"
-        _2x: "images/works/gel_elastomer.png"
-      is_even: true
+ 
 
-    - title: "Generational Return: A trip to my grandmother's hometown in rural Hungary"
-      description: "The story of a curious young documentarian, a study of storytelling media over time, and the quest to find the grave of my great-great-grandfather"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Blog post + pictures"
-        URL: "#"
-      image:
-        x: "images/works/robo-advisor.jpg"
-        _2x: "images/works/robo-advisor@2x.jpg"
-      is_even: true
+    # - title: "Fulbright Reflections Part 3: Generational Return"
+    #   description: " A trip to my grandmother's hometown in rural Hungary, the story of a curious young documentarian, a study of storytelling media over time, and the quest to find the grave of my great-great-grandfather"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Blog post + pictures"
+    #     URL: "#"
+    #   image:
+    #     x: "images/works/robo-advisor.jpg"
+    #     _2x: "images/works/robo-advisor@2x.jpg"
+    #   is_even: true
 
     - title: "Immersive Virtual Reality and the Child’s Well-being"
       description: "A presentation and publication evaluating arguments for and against VR for  children, drawing on Zuboff's Surveillance Capitalism and the philosophy of childhood"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Book chapter + symposium presentation"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Paper"
+          URL: "immersive_vr_and_the_childs_well-being.pdf"
       image:
-        x: "images/works/robo-advisor.jpg"
-        _2x: "images/works/robo-advisor@2x.jpg"
+        x: "images/works/children_in_virtual_reality_image.webp"
+        _2x: "images/works/children_in_virtual_reality_image.webp"
       is_even: true
+
+    # - title: "Fulbright reflections Part 2: Dachau as a vaccine"
+    #   description: "Reflecting on German historical memory"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Blog post"
+    #     URL: "blog/sample/"
+    #   image:
+    #     x: "images/works/dachau_as_vaccine.jpeg"
+    #     _2x: "images/works/dachau_as_vaccine.jpeg"
+    #   is_even: true
 
     - title: "Electrical Muscle Stimulation for Rhythm Learning"
       description: "Investigating the utility of proprioceptive interfaces for motor learning (Fulbright research project)"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Workshop paper + project description"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Workshop paper"
+          URL: "Intelligent_Musical_Interfaces_Workshop_Paper.pdf"
+        - icon: "icon-arrow-right"
+          btnText: "Code"
+          URL: "https://github.com/nbso13/ems_for_rhythm_learning"
       image:
-        x: "images/works/robo-advisor.jpg"
-        _2x: "images/works/robo-advisor@2x.jpg"
+        x: "images/works/EMS_paper_image.jpg"
+        _2x: "images/works/EMS_paper_image.jpg"
+      is_even: true
+
+    - title: "Unreal September"
+      description: "A poem."
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "poem"
+          URL: "blog/dr_smile/"
+      image:
+        x: "images/works/dr_smile.png"
+        _2x: "images/works/dr_smile.png"
       is_even: true
 
     - title: "Canvassing Strategy in the Houston Suburbs"
       description: "My recommendations as a Bluebonnet Data Fellow in the 2022 race for Texas House District 132"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Recommendations"
+          URL: "https://github.com/nbso13/texas_hd132_district_report/blob/main/how_to_dedicate_voting_resources_campbell_campaign_presentation.pdf"
+        - icon: "icon-arrow-right"
+          btnText: "Code"
+          URL: "https://github.com/nbso13/texas_hd132_district_report"
       image:
         x: "images/works/tiled_output.png"
         _2x: "images/works/tiled_output.png"
       is_even: true
 
+    # - title: "Munich spots and recommendations"
+    #   description: "Places to eat, relax, and adventure"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Blog post"
+    #     URL: "#"
+    #   image:
+    #     x: "images/works/robo-advisor.jpg"
+    #     _2x: "images/works/robo-advisor@2x.jpg"
+    #   is_even: true
+
+    # - title: "Fulbright reflections Part 1: A birthday trip to Regensburg"
+    #   description: "Reflecting on German historical memory"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Blog post"
+    #     URL: "blog/sample/"
+    #   image:
+    #     x: "images/works/fulbright_reflections_part_1.jpg"
+    #     _2x: "images/works/fulbright_reflections_part_1.jpg"
+    #   is_even: true
+
     - title: "Comparing Word Embedding Methods"
       description: "A final project in Computational Linguistics"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Paper"
+          URL: "word_embeddings_class_project.pdf"
+        - icon: "icon-arrow-right"
+          btnText: "Code"
+          URL: "https://github.com/nbso13/comparing_embeddings"
       image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
+        x: "images/works/comparing_embeddings_project.png"
+        _2x: "images/works/comparing_embeddings_project.png"
       is_even: true
 
     - title: "Do lancelets have telencephalons?"
       description: "A final project in Evolutionary Neuroscience"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Paper"
+          URL: "telencephalon_project.pdf"
       image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
+        x: "images/works/telencephalon_final_project.png"
+        _2x: "images/works/telencephalon_final_project.png"
       is_even: true
 
-    - title: "The Green Mill: documenting the story of a Chicago Pub through the 20th century"
-      description: "A documentary proposal (Chicago Film History final project)"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
-      image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
-      is_even: true  
+    # - title: "The Green Mill: documenting the story of a Chicago Pub through the 20th century"
+    #   description: "A documentary proposal (Chicago Film History final project)"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Documentary Proposal"
+    #     URL: "link_to_pdf_inside_website"
+    #   image:
+    #     x: "images/works/tiled_output.png"
+    #     _2x: "images/works/tiled_output.png"
+    #   is_even: true  
+
+    # - title: "Soldiers and snow: themes in the music of Elliott Smith"
+    #   description: "Exploring the lyrics of one of the best songwriters to do the thing"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "blog post"
+    #     URL: "#"
+    #   image:
+    #     x: "images/works/tiled_output.png"
+    #     _2x: "images/works/tiled_output.png"
+    #   is_even: true  
 
     - title: "Theorizing Videotelephony in the Pandemic"
       description: "A critical treatment of video conferencing during COVID"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Paper"
+          URL: "Ornstein_Theorizing the New Normal of Videotelephony.pdf"
       image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
+        x: "images/works/theorizing_videotelephony.png"
+        _2x: "images/works/theorizing_videotelephony.png"
       is_even: true 
 
-    - title: "N. Katherine Hayles: Chemist to Literary Theorist of Science and Technology"
-      description: "A final paper in the History of Social Sciences"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
-      image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
-      is_even: true  
+    # - title: "N. Katherine Hayles: Chemist to Literary Theorist of Science and Technology"
+    #   description: "A final paper in the History of Social Sciences"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Case Study + code + slide deck"
+    #     URL: "#"
+    #   image:
+    #     x: "images/works/tiled_output.png"
+    #     _2x: "images/works/tiled_output.png"
+    #   is_even: true  
+    
+    # - title: "Travel Diary"
+    #   description: "Where I've been, where I've yet to go"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "blog post"
+    #     URL: "#"
+    #   image:
+    #     x: "images/works/tiled_output.png"
+    #     _2x: "images/works/tiled_output.png"
+    #   is_even: true  
 
     - title: "Trump and the politicization of science"
-      description: "A pre-pandemic campus journal article evaluating how the Trump Administration politicized science to a new level"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
+      description: "A pre-pandemic campus journal article arguing that the first Trump Administration politicized science to a new level (image credit, CNN)"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "link to pdf of journal issue"
+          URL: "https://drive.google.com/file/d/1JsKXKj6YFjj9hpuTCsSX5WsblHoo3ISv/view?usp=sharing"
       image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
-      is_even: true  
-
-    - title: "Scoring Streetcar"
-      description: "Performing an original score to the University Theater's production of 'A Streetcar Named Desire'"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Case Study + code + slide deck"
-        URL: "#"
-      image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
+        x: "images/works/politicization_of_science.jpg"
+        _2x: "images/works/politicization_of_science.jpg"
       is_even: true  
 
     - title: "Expertise Makes the Artist: Exploring Arguments for Computer Artists"
-      description: "A summer project in the humanities of technology at the College Summer Institute at UChicago"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Final paper"
-        URL: "#"
+      description: "A summer project in undergrad humanities research (image credit, Cohen/AARON)"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Final paper pdf"
+          URL: "expertise_without_experience_computers_as_artists.pdf"
       image:
-        x: "images/works/robo-advisor.jpg"
-        _2x: "images/works/robo-advisor@2x.jpg"
+        x: "images/works/aaron_image.jpg"
+        _2x: "images/works/aaron_image.jpg"
       is_even: true
-
+    
     - title: "MealFlour/Gusarina: A short documentary about mealworm farming in Xela, Guatemala"
       description: "A documentary I shot while spending a summer in Xela, Guatemala as an intern at MealFlour, a nutrition social enterprise"
-      button:
-        icon: "icon-arrow-right"
-        btnText: "Video + blog post"
-        URL: "#"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "Video + blog post"
+          URL: "https://drive.google.com/drive/folders/13PhLQ5JEAI9U2glDBXtccnK5WLv3j3Wj?usp=sharing"
       image:
-        x: "images/works/robo-advisor.jpg"
-        _2x: "images/works/robo-advisor@2x.jpg"
+        x: "images/works/xela_guate_thumbnail.jpeg"
+        _2x: "images/works/xela_guate_thumbnail.jpeg"
       is_even: true
 
+    - title: "Adventures in a funk cover band"
+      description: "Grooving with Yudid (keyboards, vocals) through the pubs of Munich, Germany"
+      buttons:
+        - icon: "icon-arrow-right"
+          btnText: "pictures + videos"
+          URL: "https://youtu.be/G0pKAE5RpbE?feature=shared"
+      image:
+        x: "images/works/yudid_image.jpg"
+        _2x: "images/works/yudid_image.jpg"
+      is_even: true
+    # - title: "Poppies as Cenotaphs: Modernism and Remembrance in WWI"
+    #   description: "Final Essay for Modernism and War English class"
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "essay"
+    #     URL: "#"
+    #   image:
+    #     x: "images/works/robo-advisor.jpg"
+    #     _2x: "images/works/robo-advisor@2x.jpg"
+    #   is_even: true
+
+#  - title: "Scoring Streetcar"
+#       description: "Performing an original score to the University Theater's production of 'A Streetcar Named Desire'"
+#       buttons:
+#         icon: "icon-arrow-right"
+#         btnText: "Case Study + code + slide deck"
+#         URL: "#"
+#       image:
+#         x: "images/works/tiled_output.png"
+#         _2x: "images/works/tiled_output.png"
+#       is_even: true  
+
+    #  - title: "Directing canvassers as a Data Organizer for the 2024 Montana Senator campaign"
+    #   description: ""
+    #   buttons:
+    #     icon: "icon-arrow-right"
+    #     btnText: "Blog Post"
+    #     URL: "blog/sample/"
+    #   image:
+    #     x: "images/works/gel_elastomer.png"
+    #     _2x: "images/works/gel_elastomer.png"
+    #   is_even: true
 # testimonial
 testimonial:
   enable: false
@@ -286,20 +397,6 @@ testimonial:
       image:
         x: "images/testimonials/daniel-jordan.jpg"
         _2x: "images/testimonials/daniel-jordan@2x.jpg"
-
-    - name: "Jonathan Peters"
-      position: "Textic, CEO"
-      content: "Whether you or your loved one is encountering the natural decrease in mobility that occurs with the passing of time, or deals with an illness-related lack of physical agility, a stair lift can be the ideal way to put you in charge of your home again. Regardless of the shape or make of your living accommodation."
-      image:
-        x: "images/testimonials/jonathan-peters.jpg"
-        _2x: "images/testimonials/jonathan-peters@2x.jpg"
-
-    - name: "Antonio Willis"
-      position: "Cyberse, CEO"
-      content: "In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance in the achievement of increased business exposure and business sales. If your business already has a bunch of printed cards distributed to a number of potential customers and yet."
-      image:
-        x: "images/testimonials/antonio-willis.jpg"
-        _2x: "images/testimonials/antonio-willis@2x.jpg"
 
 # contact
 contact:
@@ -316,7 +413,7 @@ contact:
   email:
     title: "Email"
     email: '<a href="mailto:nickornstein4@gmail.com">nickornstein4@gmail.com</a>'
-  button:
+  buttons:
     icon: "icon-mail-fill"
     btnText: "Send Message"
 

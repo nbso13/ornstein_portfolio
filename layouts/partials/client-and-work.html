@@ -10,7 +10,7 @@
           {{ range .Site.Data.homepage.client_and_work.clients }}
           <div class="clients__item">
             <a href="https://radity.com">
-              
+             
               {{ $img := resources.Get .logo.x }}
               {{ $img2x := resources.Get .logo._2x }}
               {{ $imgWebp := $img.Resize (printf "%dx%d webp q75 Lanczos picture" $img.Width $img.Height) }}
@@ -45,14 +45,25 @@
         <p class="lead">
           {{ .description }}
         </p>
-        <a href="{{ .button.URL | absURL }}" class="btn btn-primary"
-          >{{ .button.btnText }}<i class="{{ .button.icon }}"></i
-        ></a>
+        {{ range .buttons }}
+        <a href="{{ .URL | absURL }}" class="btn btn-primary">
+          {{ .btnText }}
+          <i class="{{ .icon }}"></i>
+        </a>
+        {{ end }}
       </div>
       <div class="col-12 col-md-7 pl-md-0 text-right">
 
         {{ $img := resources.Get .image.x }}
+        {{ if $img }}
+          {{ printf "Debug: Standard image fetched: %s" $img.Name | warnf }}
+          {{ $imgWebp := $img.Resize (printf "%dx%d webp q75 Lanczos picture" $img.Width $img.Height) }}
+        {{ else }}
+          {{ printf "Error: Standard resolution image missing: %s" .image.x | errorf }}
+        {{ end }}
         {{ $img2x := resources.Get .image._2x }}
+        {{ printf "Debug: Standard resolution image path: %s\n" .image.x | warnf }}
+        {{ printf "Debug: High-resolution image path: %s\n" .image._2x | warnf }}
         {{ $imgWebp := $img.Resize (printf "%dx%d webp q75 Lanczos picture" $img.Width $img.Height) }}
         {{ $img2xWebp := $img2x.Resize (printf "%dx%d webp q75 Lanczos picture" $img2x.Width $img2x.Height) }}
         <picture class="picture-works even">
@@ -73,6 +84,8 @@
       <div class="col-12 col-md-7 pl-md-0 text-right">
         {{ $img := resources.Get .image.x }}
         {{ $img2x := resources.Get .image._2x }}
+        {{ printf "Debug 2: Standard resolution image path: %s\n" .image.x | warnf }}
+        {{ printf "Debug 2: High-resolution image path: %s\n" .image._2x | warnf }}
         {{ $imgWebp := $img.Resize (printf "%dx%d webp q75 Lanczos picture" $img.Width $img.Height) }}
         {{ $img2xWebp := $img2x.Resize (printf "%dx%d webp q75 Lanczos picture" $img2x.Width $img2x.Height) }}
         <picture class="picture-works odd">
@@ -93,9 +106,12 @@
         <p class="lead">
           {{ .description }}
         </p>
-        <a href="{{ .button.URL | absURL }}" class="btn btn-primary"
-          >{{ .button.btnText }}<i class="{{ .button.icon }}"></i
-        ></a>
+        {{ range .buttons }}
+        <a href="{{ .URL | absURL }}" class="btn btn-primary">
+          {{ .btnText }}
+          <i class="{{ .icon }}"></i>
+        </a>
+        {{ end }}
       </div>
       {{ end }}
     </div>

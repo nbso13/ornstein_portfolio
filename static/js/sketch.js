@@ -1,7 +1,7 @@
 let walkers = [];
 let attractRadius = 80;  // Distance within which walkers are attracted to the mouse
 let contagionRadius = 70;  // Distance for social contagion effect
-let maxVelocity = 3;       // Adjusted velocity for smoother movement
+let maxVelocity = 2;       // Adjusted velocity for smoother movement
 let fadeDuration = 1000;   // Duration before fading back to original color
 let numWalkers = 125;
 let isMobile;              // Variable to check if it's a mobile device
@@ -28,7 +28,7 @@ function setup() {
 
 function draw() {
   // Set a soft light blue background
-  background(220, 240, 255); // Light blue color for the background
+  background(255, 255, 255); // white background
 
   // Draw lines between walkers that are close to each other first (underneath)
   stroke(0); // Set line color to black
@@ -51,7 +51,7 @@ function draw() {
 class Walker {
   constructor() {
     this.pos = createVector(random(width), random(height));
-    this.color = randomPastelColor(); // Assign a unique pastel color at creation
+    this.color = color(85, 127, 121); // go with website theme
     this.originalColor = this.color;   // Store the original color
     this.isContagion = false;          // Track if this walker is currently red (infectious)
     this.fadeStartTime = null;         // Track when to start fading
@@ -75,7 +75,7 @@ class Walker {
     if (d < attractRadius) {
       this.turnRed();
       let force = p5.Vector.sub(mouse, this.pos);
-      force.setMag(maxVelocity / 2); // Slower attraction force
+      force.setMag(maxVelocity*1.5); 
       this.pos.add(force);
     } else if (this.fadeStartTime && millis() - this.fadeStartTime > fadeDuration) {
       this.fadeBackToOriginalColor();
