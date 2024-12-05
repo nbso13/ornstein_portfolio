@@ -235,13 +235,13 @@ client_and_work:
         x: "images/works/comparing_embeddings_project.png"
         _2x: "images/works/comparing_embeddings_project.png"
       is_even: true
-      
+
     - title: "On the Flixbus to Mantova"
       description: ""
       buttons:
         icon: "icon-arrow-right"
         btnText: "poem"
-        URL: "content/blog/on_the_flixbus_to_mantova.md"
+        URL: "blog/on_the_flixbus_to_mantova.md"
       image:
         x: "images/works/gemini_photo.jpeg"
         _2x: "images/works/gemini_photo.jpeg"
