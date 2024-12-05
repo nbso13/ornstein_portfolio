@@ -241,7 +241,7 @@ client_and_work:
       buttons:
         - icon: "icon-arrow-right"
           btnText: "poem"
-          URL: "blog/on_the_flixbus_to_mantova.md"
+          URL: "blog/on_the_flixbus_to_mantova/"
       image:
         x: "images/works/gemini_photo.jpeg"
         _2x: "images/works/gemini_photo.jpeg"
