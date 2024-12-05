@@ -110,16 +110,7 @@ client_and_work:
   title: "Projects"
   enable: true
   works:
-    # - title: "On the Flixbus to Mantova"
-    #   description: ""
-    #   buttons:
-    #     icon: "icon-arrow-right"
-    #     btnText: "poem"
-    #     URL: "content/blog/on_the_flixbus_to_mantova.md"
-    #   image:
-    #     x: "images/works/gemini_photo.jpeg"
-    #     _2x: "images/works/gemini_photo.jpeg"
-    #   is_even: true
+  
 
     - title: "Using a gel elastomer to model skin-texture interaction and improve neural code prediction"
       description: "Neuroscience Bachelor thesis"
@@ -243,6 +234,17 @@ client_and_work:
       image:
         x: "images/works/comparing_embeddings_project.png"
         _2x: "images/works/comparing_embeddings_project.png"
+      is_even: true
+      
+    - title: "On the Flixbus to Mantova"
+      description: ""
+      buttons:
+        icon: "icon-arrow-right"
+        btnText: "poem"
+        URL: "content/blog/on_the_flixbus_to_mantova.md"
+      image:
+        x: "images/works/gemini_photo.jpeg"
+        _2x: "images/works/gemini_photo.jpeg"
       is_even: true
 
     - title: "Do lancelets have telencephalons?"
