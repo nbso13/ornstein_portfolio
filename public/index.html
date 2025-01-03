@@ -150,11 +150,38 @@
 
 
 
-	<div id="sketch-container"></div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-    <script src="./js/sketch.js"></script>
-
+	  <div id="sketch-container" style="position: relative; width: 100%; height: 100vh; background: #f8f9fa;">
+        <div id="loading-message" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-family: Arial, sans-serif; color: #333;">
+          <p>Loading sketch...</p>
+          <div class="spinner" style="width: 40px; height: 40px; border: 4px solid #ccc; border-top-color: #333; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        </div>
+      </div>
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+      <script src="./js/sketch.js"></script>
+      
+      <style>
+         
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+      
+      <script>
+        
+        window.removeLoadingMessage = () => {
+          const loadingMessage = document.getElementById('loading-message');
+          if (loadingMessage) {
+            loadingMessage.remove();
+          }
+        };
+      </script>
 	
 	
 
