@@ -11,7 +11,7 @@
 <meta name="description" content="{{ .Site.Data.homepage.head.description }}">
 
 <!-- Critical CSS -->
-{{ $critical := resources.Get "css/critical.css" | resources.ToCSS | resources.Minify }}
+{{ $critical := resources.Get "css/critical.css" | css.Sass | resources.Minify }}
 <style data-generator="critical-css">
 {{ $critical.Content | safeCSS }}
 </style>
@@ -31,7 +31,7 @@
     {{ $cssBundle := $cssResources | resources.Concat "css/bundle.css" }}
 
     <!-- PostCSS Processing -->
-    {{ $css := $cssBundle | resources.PostCSS }}
+    {{ $css := $cssBundle | css.PostCSS }}
 
     <!-- Production Optimizations -->
     {{ if hugo.IsProduction }}
