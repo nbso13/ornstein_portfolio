@@ -1,7 +1,7 @@
 +++
 title = 'Latest ideas, reflections, plans.'
 date = 2025-04-21T14:38:33+02:00
-draft = false
+draft = true
 type = 'blog'
 +++
 
