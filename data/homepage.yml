@@ -98,12 +98,13 @@ experience:
     URL: "https://www.linkedin.com/in/nicholas-benjamin-ornstein/"
   button2:
     icon: "icon-profile-fill"
-    btnText: "Download My Resume"
-    URL: "ornstein_resume_2024.pdf"
-  button3:
-    icon: "icon-profile-fill"
     btnText: "Download my CV"
-    URL: "ornstein_cv_2024.pdf"
+    URL: "final_cv_for_website_and_grfp.pdf"
+  # button3:
+  # icon: "icon-profile-fill"
+  #   btnText: "Download My Resume"
+  #   URL: "ornstein_resume_2024.pdf"
+    
 
 # Client & Work
 client_and_work:
@@ -186,19 +187,19 @@ client_and_work:
         _2x: "images/works/dr_smile.png"
       is_even: true
 
-    - title: "Canvassing Strategy in the Houston Suburbs"
-      description: "My recommendations as a Bluebonnet Data Fellow in the 2022 race for Texas House District 132"
-      buttons:
-        - icon: "icon-arrow-right"
-          btnText: "Recommendations"
-          URL: "https://github.com/nbso13/texas_hd132_district_report/blob/main/how_to_dedicate_voting_resources_campbell_campaign_presentation.pdf"
-        - icon: "icon-arrow-right"
-          btnText: "Code"
-          URL: "https://github.com/nbso13/texas_hd132_district_report"
-      image:
-        x: "images/works/tiled_output.png"
-        _2x: "images/works/tiled_output.png"
-      is_even: true
+    # - title: "Canvassing Strategy in the Houston Suburbs"
+    #   description: "My recommendations as a Bluebonnet Data Fellow in the 2022 race for Texas House District 132"
+    #   buttons:
+    #     - icon: "icon-arrow-right"
+    #       btnText: "Recommendations"
+    #       URL: "https://github.com/nbso13/texas_hd132_district_report/blob/main/how_to_dedicate_voting_resources_campbell_campaign_presentation.pdf"
+    #     - icon: "icon-arrow-right"
+    #       btnText: "Code"
+    #       URL: "https://github.com/nbso13/texas_hd132_district_report"
+    #   image:
+    #     x: "images/works/tiled_output.png"
+    #     _2x: "images/works/tiled_output.png"
+    #   is_even: true
 
     # - title: "Munich spots and recommendations"
     #   description: "Places to eat, relax, and adventure"
@@ -313,16 +314,16 @@ client_and_work:
     #     _2x: "images/works/tiled_output.png"
     #   is_even: true  
 
-    - title: "Trump and the politicization of science"
-      description: "A pre-pandemic campus journal article arguing that the first Trump Administration politicized science to a new level (image credit, CNN)"
-      buttons:
-        - icon: "icon-arrow-right"
-          btnText: "link to pdf of journal issue"
-          URL: "https://drive.google.com/file/d/1JsKXKj6YFjj9hpuTCsSX5WsblHoo3ISv/view?usp=sharing"
-      image:
-        x: "images/works/politicization_of_science.jpg"
-        _2x: "images/works/politicization_of_science.jpg"
-      is_even: true  
+    # - title: "Trump and the politicization of science"
+    #   description: "A pre-pandemic campus journal article arguing that the first Trump Administration politicized science to a new level (image credit, CNN)"
+    #   buttons:
+    #     - icon: "icon-arrow-right"
+    #       btnText: "link to pdf of journal issue"
+    #       URL: "https://drive.google.com/file/d/1JsKXKj6YFjj9hpuTCsSX5WsblHoo3ISv/view?usp=sharing"
+    #   image:
+    #     x: "images/works/politicization_of_science.jpg"
+    #     _2x: "images/works/politicization_of_science.jpg"
+    #   is_even: true  
 
     - title: "Expertise Makes the Artist: Exploring Arguments for Computer Artists"
       description: "A summer project in undergrad humanities research (image credit, Cohen/AARON)"
@@ -404,24 +405,25 @@ testimonial:
 contact:
   enable: true
   title: "Contact"
-  form:
-    action: "#"
-    full_name: "Full Name"
-    email: "Email Address"
-    message: "Type Your Message Here"
-  # phone:
-  #   title: "Phone Number"
-  #   number: "+555 (11) 123 44 55"
   email:
     title: "Email"
     email: '<a href="mailto:nickornstein4@gmail.com">nickornstein4@gmail.com</a>'
-  buttons:
-    icon: "icon-mail-fill"
-    btnText: "Send Message"
+  # form:
+  #   action: "#"
+  #   full_name: "Full Name"
+  #   email: "Email Address"
+  #   message: "Type Your Message Here"
+  # phone:
+  #   title: "Phone Number"
+  #   number: "+555 (11) 123 44 55"
+  
+  # buttons:
+  #   icon: "icon-mail-fill"
+  #   btnText: "Send Message"
 
 # newsletter
 newsletter:
-  enable: true
+  enable: false
   title: "Newsletter subscription"
   success_message: "Successfully subscribed"
   error_message: "Error while subscribing."
